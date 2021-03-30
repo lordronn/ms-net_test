@@ -12,8 +12,8 @@
         <span class="header__waiting-time">Ждет ответ 3 д 12 ч</span>
       </div>
       <p>
-        Публичное акционерное общество / Территориальная генерирующая компания №
-        2
+        Публичное акционерное общество / Территориальная генерирующая компания
+        №2
       </p>
     </div>
     <div class="header__admin-info">
@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped >
+<style lang="scss" scoped>
 .header {
   background-color: #e5e5e5;
   box-sizing: border-box;
@@ -83,8 +83,9 @@ export default {
         height: 17px;
       }
       &:hover {
-      font-size: 14px;
-
+        font-size: 14px;
+        cursor: pointer;
+        outline: none;
       }
     }
   }
@@ -100,6 +101,12 @@ export default {
       border: none;
       padding: 0;
       margin-right: 18px;
+
+      &:hover {
+        background-color: #f2fbff;
+        outline: none;
+        cursor: pointer;
+      }
       & > span {
         font-weight: 500;
         font-size: 11px;

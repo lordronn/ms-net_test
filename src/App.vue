@@ -25,8 +25,5 @@ html, body {
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
-section {
-  height: 100%;
-}
 
 </style>

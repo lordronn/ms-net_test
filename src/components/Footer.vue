@@ -35,7 +35,14 @@ export default {
   padding: 31px 31px 0;
   display: flex;
   text-align: left;
-
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    #2d0af0 7.69%,
+    #00beff 33.37%,
+    rgba(0, 190, 255, 0) 99%
+  );
+  border-image-slice: 1;
   .first {
     margin-right: 185px;
   }

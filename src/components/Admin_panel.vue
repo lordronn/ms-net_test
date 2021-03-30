@@ -8,7 +8,11 @@
         <p
           class="content__item content__item_father"
           :class="{ content__item_active: activeMenuItem === item.name }"
-          @click="(activeMenuItem === item.name)? activeMenuItem = '' : activeMenuItem = item.name"
+          @click="
+            activeMenuItem === item.name
+              ? (activeMenuItem = '')
+              : (activeMenuItem = item.name)
+          "
         >
           {{ item.name }}
         </p>
@@ -17,7 +21,7 @@
           class="content__params"
         >
           <li
-            @click="(activeItem === val) ? activeItem = '' : activeItem = val"
+            @click="activeItem === val ? (activeItem = '') : (activeItem = val)"
             class="content__item"
             :class="{ content__item_active: activeItem === val }"
             v-for="(val, key) in item.params"
@@ -65,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 .panel {
   margin-top: 90px;
-  height: calc(100% - 90px);
+  min-width: 303px;
   box-sizing: border-box;
   background-color: #0047ba;
   padding: 6px 6px 12px 30px;
@@ -89,15 +93,17 @@ export default {
     &__item {
       margin: 0;
       padding: 13px 0 16px 20px;
+      font-size: 13px;
+
       &_father {
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
-        font-weight: bold;
         border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
       }
       &_active {
-        color: red;
+        background-color: rgba($color: #d2f0ff, $alpha: 0.2);
+        color: #e5e5e5;
         border: none;
       }
       &:hover {
@@ -110,6 +116,12 @@ export default {
       padding: 16px 63px;
       font-size: 14px;
       color: #1473fa;
+      &:hover {
+        background-color: #f2fbff;
+        cursor: pointer;
+        outline: none;
+        border-color: #f2fbff;
+      }
     }
   }
 }
